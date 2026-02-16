@@ -80,6 +80,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
 $(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
+$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.oplus.waffle)
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
