@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 12 (CPH2573_16.0.3.500(EX01)).
+## are from OnePlus 12 (CPH2573_16.0.5.702(EX01)).
 
 # Current blobs with deps disabled:
 # com.oplus.node.mvgsat, com.oplus.node.sstabphoto, com.qti.node.dewarp, com.qti.chi.override, libcamximageformatutils, libchifeature2 depends on multiple versions of the same aidl_interface: android.hardware.graphics.allocator-V1-ndk, android.hardware.graphics.allocator-V2-ndk-source
@@ -2306,6 +2306,7 @@ vendor/etc/2024-01-12_platform_RSA_license_a226ad89-a187-4b14-9447-d20bfe9dac1a.
 vendor/etc/oem_51_prj_OppoLTM8650_1689712162019.pfm
 vendor/lib64/libcwb_client_vendor.so
 vendor/lib64/libcwb_qcom_aidl.so
+vendor/lib64/libdtlm.so
 vendor/lib64/vendor.oplus.hardware.cwb-V1-ndk.so
 vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
 vendor/lib64/vendor.oplus.hardware.displaycolorfeature-V1-ndk.so;MODULE_SUFFIX=_vendor
@@ -2332,6 +2333,7 @@ odm/etc/sensor/config/lanai_mtp_pocket.json
 odm/etc/sensor/config/lanai_mtp_sx933x_0.json
 odm/etc/sensor/config/lanai_mtp_sx937x_0.json
 odm/etc/sensor/config/lux_aod.json
+odm/etc/sensor/config/oplus_car_motion.json
 odm/etc/sensor/config/waffle_qrd_ois_system.json
 odm/etc/sensor/sensor_config.json
 
