@@ -2073,6 +2073,9 @@ odm/etc/nfc/libnfc-mtp-SN220.conf_25211:odm/etc/libnfc-mtp-SN220.conf_25211
 odm/etc/nfc/libnfc-nci.conf_25211:vendor/etc/libnfc-nci.conf
 odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_45:vendor/firmware/sn220u.bin
 
+# OSENSE
+odm/lib64/libosensenativeproxy_client.so:odm/lib64/libosensenativeproxy_client_lighthouse.so;FIX_SONAME
+
 # Sensors config
 odm/etc/sensor/config/kaanapali_mtp_ak09919.json
 odm/etc/sensor/config/kaanapali_mtp_alsps.json
