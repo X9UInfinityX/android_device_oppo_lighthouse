@@ -87,8 +87,8 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'infiniti',
-    'oneplus',
+    'lighthouse',
+    'oppo',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
@@ -97,6 +97,6 @@ module = ExtractUtilsModule(
 
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(
-        module, 'sm8850-common', module.vendor
+        module, '../oneplus/sm8850-common', module.vendor
     )
     utils.run()

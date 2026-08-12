@@ -1,7 +1,7 @@
 # Device info
-ro.product.odm.device=OP60FFL1
-ro.product.odm.model=PLK110
-ro.product.odm.name=PLK110
+ro.product.odm.device=OP61BDL1
+ro.product.odm.model=PMA110
+ro.product.odm.name=PMA110
 ro.vendor.oplus.regionmark=CN
 
 # NFC

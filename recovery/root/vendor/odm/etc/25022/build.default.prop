@@ -1,0 +1,8 @@
+# Device info
+ro.product.odm.device=OP61BDL1
+ro.product.odm.model=PMA120
+ro.product.odm.name=PMA120
+ro.vendor.oplus.regionmark=CN
+
+# NFC
+persist.vendor.nfc.config_file_name=libnfc-mtp-SN220.conf_25021

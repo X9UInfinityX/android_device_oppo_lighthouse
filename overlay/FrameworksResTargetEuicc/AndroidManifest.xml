@@ -7,7 +7,5 @@
           package="android.overlay.target.euicc">
     <overlay android:targetPackage="android"
              android:isStatic="true"
-             android:priority="250"
-             android:requiredSystemPropertyName="ro.boot.prjname"
-             android:requiredSystemPropertyValue="24863" />
+             android:priority="250"/>
 </manifest>
