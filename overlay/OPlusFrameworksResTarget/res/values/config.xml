@@ -301,10 +301,10 @@
          config_mainBuiltInDisplayCutout
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
-        M -39,0
-        L -39,141
-        L 38,141
-        L 39,0
+        M -42,0
+        L -42,160
+        L 42,160
+        L 42,0
         Z
     </string>
 
