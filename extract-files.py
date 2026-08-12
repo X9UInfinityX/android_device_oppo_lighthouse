@@ -44,8 +44,8 @@ blob_fixups: blob_fixups_user_type = {
     'odm/etc/init/init.camera_process.rc': blob_fixup()
         .regex_replace('    delete_recursion', '    #delete_recursion'),
     (
-        'odm/etc/libnfc-mtp-SN220.conf_24831',
-        'odm/etc/libnfc-mtp-SN220.conf_24863',
+        'odm/etc/libnfc-mtp-SN220.conf_25021',
+        'odm/etc/libnfc-mtp-SN220.conf_25211',
     ): blob_fixup()
         .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02')
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),

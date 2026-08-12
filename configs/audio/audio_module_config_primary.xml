@@ -160,12 +160,15 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <devicePort tagName="speaker" role="sink" attached="true" defaultDevice="true" deviceType="OUT_SPEAKER">
             <profile samplingRates="48000" channelLayouts="LAYOUT_STEREO" formatType="PCM" pcmType="INT_16_BIT" />
         </devicePort>
+        <!-- #ifndef OPLUS_BUG_STABILITY
+        // Minyi.Hu@MULTIMEDIA.AUDIODRIVER.HAL, 2024/09/11, petrel do not support headset/headphone device
         <devicePort tagName="wired_headset" deviceType="OUT_HEADSET" role="sink" connection="analog">
             <profile samplingRates="48000" channelLayouts="LAYOUT_STEREO" formatType="PCM" pcmType="INT_16_BIT" />
         </devicePort>
         <devicePort tagName="wired_headphones" deviceType="OUT_HEADPHONE" role="sink" connection="analog">
             <profile samplingRates="48000" channelLayouts="LAYOUT_STEREO" formatType="PCM" pcmType="INT_16_BIT" />
         </devicePort>
+        #endif OPLUS_BUG_STABILITY -->
         <devicePort tagName="line_out" deviceType="OUT_DEVICE" role="sink" connection="analog">
             <profile samplingRates="48000" channelLayouts="LAYOUT_STEREO" formatType="PCM" pcmType="INT_16_BIT" />
         </devicePort>
@@ -237,9 +240,12 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <devicePort tagName="fm_tuner_mic" deviceType="IN_FM_TUNER" role="source" attached="true">
             <profile samplingRates="48000" channelLayouts="LAYOUT_MONO LAYOUT_STEREO" formatType="PCM" pcmType="INT_16_BIT" />
         </devicePort>
+        <!-- #ifndef OPLUS_BUG_STABILITY
+        // Minyi.Hu@MULTIMEDIA.AUDIODRIVER.HAL, 2024/09/11, petrel do not support headset/headphone device
         <devicePort tagName="wired_headset_mic" deviceType="IN_HEADSET" connection="analog" role="source">
             <profile samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000" channelLayouts="LAYOUT_MONO LAYOUT_STEREO LAYOUT_FRONT_BACK" formatType="PCM" pcmType="INT_16_BIT" />
         </devicePort>
+        #endif OPLUS_BUG_STABILITY -->
         <devicePort tagName="proxy_input_device" deviceType="IN_AFE_PROXY" connection="virtual" role="source">
             <profile samplingRates="8000 11025 16000 22050 32000 44100 48000 64000 88200 96000 128000 176400 192000" channelLayouts="LAYOUT_MONO LAYOUT_STEREO" formatType="PCM" pcmType="INT_16_BIT" />
         </devicePort>
