@@ -1404,6 +1404,7 @@ odm/lib64/libmpbase.so
 odm/lib64/libmsnativefilter.so
 odm/lib64/libmvgcommon.so
 odm/lib64/libmvgfusion.so
+odm/lib64/libocam_hmbird.so
 odm/lib64/libocce3a.so
 odm/lib64/libocompression.so
 odm/lib64/libomp.so
