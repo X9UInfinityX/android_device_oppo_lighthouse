@@ -1330,6 +1330,7 @@ odm/lib64/libOPAlgoCamSinglePortrait.so
 odm/lib64/libOPLUSMotionDetection.so
 odm/lib64/libOplusPDCore.so
 odm/lib64/libOpo_awb.so
+odm/lib64/libPDParamParser.so
 odm/lib64/libRedeyeReduce.so
 odm/lib64/libSchedAssistExtImpl_vendor.so
 odm/lib64/libSpecRecon.so
