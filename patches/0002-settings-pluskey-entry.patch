@@ -1,0 +1,147 @@
+From: Jonas Salo <salomannen1234@gmail.com>
+Subject: [PATCH] Settings: add capability-gated Plus Key entry
+
+Show the entry on every product that ships the privileged PlusKey system app,
+without checking a device codename or model.
+
+Co-Authored-By: Ren Hiyama <renhiyama@rovelstars.com>
+---
+
+diff --git a/res/drawable/ic_settings_pluskey.xml b/res/drawable/ic_settings_pluskey.xml
+new file mode 100644
+index 0000000..0b0eb33
+--- /dev/null
++++ b/res/drawable/ic_settings_pluskey.xml
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="utf-8"?>
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="24"
++    android:viewportHeight="24"
++    android:tint="?android:attr/colorControlNormal">
++
++    <path
++        android:fillColor="@android:color/white"
++        android:pathData="M7,7h10c2.76,0 5,2.24 5,5s-2.24,5 -5,5H7c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5zM7,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3h10c1.66,0 3,-1.34 3,-3s-1.34,-3 -3,-3H7z" />
++
++    <path
++        android:fillColor="@android:color/white"
++        android:pathData="M10,11h4v2h-4z" />
++
++    <path
++        android:fillColor="@android:color/white"
++        android:pathData="M11,10h2v4h-2z" />
++</vector>
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index 8246f5b..c3ddb88 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -15590,4 +15590,8 @@
+     <!-- Search keywords for Human interface device access setting -->
+     <string name="keywords_access_hid">hid, human, access, device</string>
+     <!-- Access HID end -->
++
++    <!-- Plus Key -->
++    <string name="top_level_pluskey_title">Plus Key</string>
++    <string name="top_level_pluskey_summary">Customize the side button</string>
+ </resources>
+diff --git a/res/xml/top_level_settings.xml b/res/xml/top_level_settings.xml
+index 93f4c9f..0a2be5d 100644
+--- a/res/xml/top_level_settings.xml
++++ b/res/xml/top_level_settings.xml
+@@ -120,6 +120,20 @@
+             android:summary="@string/wallpaper_dashboard_summary"
+             settings:highlightableMenuKey="@string/menu_key_wallpaper"
+             settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
++
++        <com.android.settings.widget.HomepagePreference
++            android:icon="@drawable/ic_settings_pluskey"
++            android:key="top_level_pluskey"
++            android:order="-5"
++            android:title="@string/top_level_pluskey_title"
++            android:summary="@string/top_level_pluskey_summary"
++            settings:highlightableMenuKey="@string/top_level_pluskey_title"
++            settings:controller="com.android.settings.homepage.PlusKeyPreferenceController">
++
++            <intent
++                android:action="com.oplus.pluskey.SETTINGS"
++                android:targetPackage="com.oplus.pluskey" />
++        </com.android.settings.widget.HomepagePreference>
+     </PreferenceCategory>
+ 
+     <PreferenceCategory
+diff --git a/res/xml/top_level_settings_expressive.xml b/res/xml/top_level_settings_expressive.xml
+index dc7afc7..f65ca2b 100644
+--- a/res/xml/top_level_settings_expressive.xml
++++ b/res/xml/top_level_settings_expressive.xml
+@@ -116,6 +116,20 @@
+             android:summary="@string/wallpaper_dashboard_summary"
+             settings:highlightableMenuKey="@string/menu_key_wallpaper"
+             settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
++
++        <com.android.settings.widget.HomepagePreference
++            android:icon="@drawable/ic_settings_pluskey"
++            android:key="top_level_pluskey"
++            android:order="-5"
++            android:title="@string/top_level_pluskey_title"
++            android:summary="@string/top_level_pluskey_summary"
++            settings:highlightableMenuKey="@string/top_level_pluskey_title"
++            settings:controller="com.android.settings.homepage.PlusKeyPreferenceController">
++
++            <intent
++                android:action="com.oplus.pluskey.SETTINGS"
++                android:targetPackage="com.oplus.pluskey" />
++        </com.android.settings.widget.HomepagePreference>
+     </com.android.settingslib.widget.UntitledPreferenceCategory>
+ 
+     <com.android.settingslib.widget.UntitledPreferenceCategory
+diff --git a/src/com/android/settings/homepage/PlusKeyPreferenceController.java b/src/com/android/settings/homepage/PlusKeyPreferenceController.java
+new file mode 100644
+index 0000000..157937d
+--- /dev/null
++++ b/src/com/android/settings/homepage/PlusKeyPreferenceController.java
+@@ -0,0 +1,41 @@
++/*
++ * Copyright (C) 2026 The Android Open Source Project
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++package com.android.settings.homepage;
++
++import android.content.Context;
++import android.content.Intent;
++import android.content.pm.PackageManager;
++import android.content.pm.ResolveInfo;
++
++import com.android.settings.core.BasePreferenceController;
++
++public class PlusKeyPreferenceController extends BasePreferenceController {
++    private static final Intent PLUS_KEY_SETTINGS = new Intent(
++            "com.oplus.pluskey.SETTINGS").setPackage("com.oplus.pluskey");
++
++    public PlusKeyPreferenceController(Context context, String preferenceKey) {
++        super(context, preferenceKey);
++    }
++
++    @Override
++    public int getAvailabilityStatus() {
++        ResolveInfo info = mContext.getPackageManager().resolveActivity(
++                PLUS_KEY_SETTINGS, PackageManager.MATCH_SYSTEM_ONLY);
++        return info != null && info.activityInfo.applicationInfo.isPrivilegedApp()
++                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
++    }
++}
+-- 
+2.51.0

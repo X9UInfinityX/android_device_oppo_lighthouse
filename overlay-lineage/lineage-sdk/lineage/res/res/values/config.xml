@@ -5,6 +5,10 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <!-- The programmable side key is handled by the PlusKey app. -->
+    <integer name="config_deviceHardwareKeys">64</integer>
+    <integer name="config_deviceHardwareWakeKeys">64</integer>
+
     <!-- Whether the device supports wireless charging or not -->
     <bool name="config_deviceSupportsWirelessCharging">true</bool>
 </resources>
