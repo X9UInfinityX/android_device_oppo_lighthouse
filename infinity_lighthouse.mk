@@ -13,6 +13,7 @@ $(call inherit-product, device/oppo/lighthouse/device.mk)
 
 # Inherit some common Lineage stuff.
 INFINITY_MAINTAINER := koaaN
+BYPASS_CHARGE_SUPPORTED := true
 
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
