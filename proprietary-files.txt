@@ -1320,7 +1320,7 @@ odm/lib64/libOPAlgoCamFaceRestore.so
 odm/lib64/libOPAlgoCamGroupClassifier.so
 odm/lib64/libOPAlgoCamHDRTransformCamera.so
 odm/lib64/libOPAlgoCamHDRTransformQuick.so
-odm/lib64/libOPAlgoCamHybridMorph.so
+odm/lib64/libOPAlgoCamHybridMorph.so;DISABLE_CHECKELF
 odm/lib64/libOPAlgoCamHybridRaw.so
 odm/lib64/libOPAlgoCamHybridRawQuick.so
 odm/lib64/libOPAlgoCamPortraitHDRTransform.so
