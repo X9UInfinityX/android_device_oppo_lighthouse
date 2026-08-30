@@ -1757,7 +1757,6 @@ vendor/lib64/libmfec.so
 vendor/lib64/libmidasserviceintf_aidl.so
 vendor/lib64/vendor.oplus.hardware.camera_rfi-V3-ndk.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk.so
-vendor/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk.so
 vendor/lib64/libmmcamera_bestats.so
 vendor/lib64/libmmcamera_cac.so
 vendor/lib64/libmmcamera_lscv35.so
