@@ -12,9 +12,14 @@ from extract_utils.fixups_lib import (
     lib_fixups,
     lib_fixups_user_type,
 )
+from extract_utils.file import File
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
+)
+from extract_utils.source import (
+    DiskSource,
+    Source,
 )
 
 namespace_imports = [
@@ -89,7 +94,42 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
 }  # fmt: skip
 
-module = ExtractUtilsModule(
+
+class LighthouseExtractUtilsModule(ExtractUtilsModule):
+    def get_firmware_files(self):
+        # abl.img is supplied by the device tree, not the extraction source.
+        return [
+            file for file in super().get_firmware_files()
+            if file.src != 'abl.img'
+        ]
+
+    def process_file(
+        self,
+        file: File,
+        source: Source,
+        backup_source: Source,
+        vendor_path: str,
+        is_firmware: bool,
+        kang: bool,
+        allow_prohibited_files: bool = False,
+    ) -> bool:
+        if is_firmware and file.src == 'abl.img':
+            # Always populate vendor/oppo/lighthouse/radio/abl.img from the
+            # known-good image committed in the device tree.
+            source = backup_source = DiskSource(f'{self.device_path}/radio')
+
+        return super().process_file(
+            file,
+            source,
+            backup_source,
+            vendor_path,
+            is_firmware,
+            kang,
+            allow_prohibited_files=allow_prohibited_files,
+        )
+
+
+module = LighthouseExtractUtilsModule(
     'lighthouse',
     'oppo',
     blob_fixups=blob_fixups,
