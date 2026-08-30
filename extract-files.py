@@ -20,6 +20,7 @@ from extract_utils.main import (
 namespace_imports = [
     'hardware/oplus',
     'hardware/qcom-caf/sm8850',
+    'vendor/oppo/lighthouse-camera',
     'vendor/oneplus/sm8850-common',
     'vendor/qcom/opensource/commonsys-intf/display',
 ]
