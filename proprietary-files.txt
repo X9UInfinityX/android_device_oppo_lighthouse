@@ -1434,6 +1434,7 @@ odm/lib64/libyuvwrapper.so
 odm/lib64/libzlib.so
 odm/lib64/ubwc_tp10_ds4_to_pd10.cl.bin
 odm/lib64/vendor.oplus.hardware.camera.aon-service-impl.so
+odm/lib64/vendor.oplus.hardware.camera.aon-V1-ndk.so
 odm/lib64/vendor.oplus.hardware.camera_rfi-V1-service-impl.so
 odm/lib64/vendor.oplus.hardware.sendextcamcmd-V1-service-impl.so
 vendor/bin/hw/vendor.qti.camera.provider-service_64;DISABLE_DEPS
