@@ -10,7 +10,7 @@ USE_PREBUILT_KERNEL ?= true
 BOARD_SUPER_PARTITION_SIZE := 20451426304
 
 # Include the common OEM chipset BoardConfig.
-include device/oneplus/sm8850-common/BoardConfigCommon.mk
+include device/oppo/sm8850-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/oppo/lighthouse
 
