@@ -1,3 +1,5 @@
 ro.product.marketname=OPPO Find X9 Ultra
 ro.infinity.soc=Snapdragon 8 Elite Gen 5
 ro.infinity.camera=200MP + 200MP + 50MP + 50MP + 50MP
+
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
