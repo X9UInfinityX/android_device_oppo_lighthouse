@@ -30,6 +30,12 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint3-service.strongbox.nxp \
     android.hardware.weaver-service.nxp
 
+# Spruce capacitive camera button
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/input/sidekey_cali_config.json:$(TARGET_COPY_OUT_ODM)/etc/devices_config/sidekey_cali_config.json \
+    $(LOCAL_PATH)/configs/input/sidekey_config.xml:$(TARGET_COPY_OUT_ODM)/etc/devices_config/sidekey_config.xml \
+    $(LOCAL_PATH)/keylayout/cs_press.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/cs_press.kl
+
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
 
