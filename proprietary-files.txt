@@ -2079,6 +2079,15 @@ odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_45:vendor/firmware/sn220u.bin
 # OSENSE
 odm/lib64/libosensenativeproxy_client.so:odm/lib64/libosensenativeproxy_client_lighthouse.so;FIX_SONAME
 
+# OPlus Misc HAL (Spruce camera button)
+odm/bin/hw/vendor-oplus-hardware-misc-V1-service
+odm/etc/init/vendor-oplus-hardware-misc-V1-service.rc
+odm/etc/permissions/vendor-oplus-hardware-misc-V1.xml
+odm/etc/vintf/manifest/manifest_misc_aidl.xml
+odm/firmware/shouder/cs_press.bin
+odm/lib64/vendor.oplus.hardware.misc-V1-ndk.so
+system_ext/framework/vendor.oplus.hardware.misc-V1-java.jar
+
 # Sensors config
 odm/etc/sensor/config/kaanapali_mtp_ak09919.json
 odm/etc/sensor/config/kaanapali_mtp_alsps.json
