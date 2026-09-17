@@ -58,7 +58,8 @@ PRODUCT_PACKAGES += \
 
 # Properties
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.build.version.ota=CPH2841_11.A.61_0610_202607061821
+    ro.build.version.ota=CPH2841_11.A.61_0610_202607061821 \
+    ro.oplus.product.series=Find_series
 
 # Recovery
 $(call soong_config_set_bool,recovery,target_recovery_uses_qti_drm,true)
