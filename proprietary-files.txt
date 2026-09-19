@@ -2156,3 +2156,7 @@ odm/etc/wifi/peach/bdwlan.elf
 odm/etc/wifi/peach/regdb.bin
 odm/etc/wifi/peach/regdb_version
 odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
+
+# Widevine OEMCrypto (F9UEU, CPH2841_16.0.9.403(EX01))
+# Loaded dynamically by the Widevine APEX and the OPlus CryptoEng HAL.
+vendor/lib64/liboemcrypto.so

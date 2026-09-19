@@ -6,3 +6,6 @@ ro.vendor.oplus.regionmark=CN
 
 # NFC
 persist.vendor.nfc.config_file_name=libnfc-mtp-SN220.conf_25021
+
+# Widevine: CN hardware uses the factory keybox provisioning path.
+vendor.wv.oemcrypto.debug.enable_prov40=false
