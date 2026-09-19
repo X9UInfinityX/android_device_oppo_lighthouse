@@ -5,6 +5,23 @@
 -->
 <resources>
     <bool name="config_supportsOplusLtpo">true</bool>
+
+    <string-array name="high_touch_polling_rate_entries">
+        <item>120 Hz</item>
+        <item>150 Hz</item>
+        <item>180 Hz</item>
+        <item>240 Hz</item>
+        <item>288 Hz</item>
+    </string-array>
+
+    <string-array name="high_touch_polling_rate_values" translatable="false">
+        <item>0</item>
+        <item>12</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
     <!-- The number of vibration intensity levels supported by the device.
 
          Note that this should correspond to the ability to vary the vibration amplitude, with
