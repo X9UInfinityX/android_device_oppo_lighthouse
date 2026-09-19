@@ -139,7 +139,11 @@ module = LighthouseExtractUtilsModule(
 )
 
 if __name__ == '__main__':
-    utils = ExtractUtils.device_with_common(
-        module, '../oneplus/sm8850-common', module.vendor
+    common_module = ExtractUtils.get_module('sm8850-common', module.vendor)
+    # Apollo needs the X9 Ultra calibration files relocated from my_product.
+    # Both prefixes have the same length to preserve the stock ELF layout.
+    common_module.blob_fixups['vendor/lib64/libsdmcore.so'].binary_regex_replace(
+        b'/my_product/vendor/etc/', b'/vendor/etc/oplus_disp/'
     )
+    utils = ExtractUtils(module, [common_module])
     utils.run()

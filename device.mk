@@ -23,7 +23,12 @@ $(call inherit-product-if-exists, device/oppo/lighthouse-camera/opluscamera.mk)
 
 # Display
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947090715748499.xml
+    $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947090715748499.xml \
+    vendor/oppo/lighthouse/proprietary/vendor/etc/display_apollo_list_AC347_P_3_A0019_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/oplus_disp/display_apollo_list_AC347_P_3_A0019_dsc_cmd_mode_panel.xml
+
+# Adaptive panel refresh
+PRODUCT_PACKAGES += \
+    oplus_adfr_init
 
 # Keymint
 PRODUCT_PACKAGES += \

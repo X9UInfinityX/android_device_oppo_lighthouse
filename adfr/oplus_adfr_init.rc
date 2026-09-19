@@ -1,0 +1,11 @@
+service oplus_adfr_init /odm/bin/oplus_adfr_init
+    class late_start
+    user root
+    group system graphics
+    disabled
+
+on property:sys.boot_completed=1
+    start oplus_adfr_init
+
+on property:persist.sys.oplus_ltpo_min_fps=*
+    setprop vendor.display.oplus_ltpo_min_fps ${persist.sys.oplus_ltpo_min_fps}

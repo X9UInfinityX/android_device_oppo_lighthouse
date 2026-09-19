@@ -4,6 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <bool name="config_supportsOplusLtpo">true</bool>
     <!-- The number of vibration intensity levels supported by the device.
 
          Note that this should correspond to the ability to vary the vibration amplitude, with

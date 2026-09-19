@@ -2160,3 +2160,8 @@ odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 # Widevine OEMCrypto (F9UEU, CPH2841_16.0.9.403(EX01))
 # Loaded dynamically by the Widevine APEX and the OPlus CryptoEng HAL.
 vendor/lib64/liboemcrypto.so
+
+# Adaptive display refresh (F9UEU)
+my_product/vendor/etc/multimedia_display_adfr2minfps_config.xml:vendor/etc/multimedia_display_adfr2minfps_config.xml
+odm/lib64/libdisplayadfr2minfps_qcom.so
+odm/lib64/libdisplayhistoctrl_qcom.so

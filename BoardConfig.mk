@@ -14,6 +14,9 @@ include device/oppo/sm8850-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/oppo/lighthouse
 
+# SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := OP61BDL1,OP627CL1
 
