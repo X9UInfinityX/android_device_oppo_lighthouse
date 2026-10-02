@@ -27,7 +27,7 @@ TARGET_SCREEN_DENSITY := 640
 ifeq ($(USE_PREBUILT_KERNEL), true)
 include device/oppo/lighthouse-kernel/BoardConfig.mk
 else
-TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_LIGHTHOUSE_DTB=y
+TARGET_KERNEL_BAZEL_FLAGS += --//vendor/oneplus/sm8850:dtbo_config=//vendor/oneplus/sm8850-devicetrees:dengta_dtbo_config
 endif
 
 # Properties
