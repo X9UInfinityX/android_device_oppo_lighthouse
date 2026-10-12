@@ -141,7 +141,7 @@ module = LighthouseExtractUtilsModule(
     add_firmware_proprietary_file=True,
 )
 
-add_generated_thermal_engine_config(module)
+add_generated_thermal_engine_config(module, '25212,25211')
 
 if __name__ == '__main__':
     common_module = ExtractUtils.get_module('sm8850-common', module.vendor)
