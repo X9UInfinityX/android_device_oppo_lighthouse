@@ -63,6 +63,7 @@ PRODUCT_PACKAGES += \
 
 # Properties
 PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.battery_bypass_supported=true \
     ro.build.version.ota=CPH2841_11.A.61_0610_202607061821 \
     ro.oplus.product.series=Find_series
 
