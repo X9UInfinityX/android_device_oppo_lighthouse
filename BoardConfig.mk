@@ -4,8 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-USE_PREBUILT_KERNEL ?= true
-
 # Partitions
 BOARD_SUPER_PARTITION_SIZE := 20451426304
 
@@ -24,11 +22,7 @@ TARGET_OTA_ASSERT_DEVICE := OP61BDL1,OP627CL1
 TARGET_SCREEN_DENSITY := 640
 
 # Kernel
-ifeq ($(USE_PREBUILT_KERNEL), true)
-include device/oppo/lighthouse-kernel/BoardConfig.mk
-else
 TARGET_KERNEL_BAZEL_FLAGS += --//vendor/oneplus/sm8850:dtbo_config=//vendor/oneplus/sm8850-devicetrees:dengta_dtbo_config
-endif
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
