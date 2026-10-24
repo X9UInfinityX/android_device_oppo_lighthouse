@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OPPO Find X9 Ultra (CPH2841_16.0.9.403(EX01)).
+## are from OPPO Find X9 Ultra (CPH2841_17.0.0.101(EX01)).
 
 # ACDB
 odm/etc/acdbdata/FTM/acdb_cal.acdb
@@ -2077,7 +2077,7 @@ odm/etc/nfc/libnfc-nci.conf_25211:vendor/etc/libnfc-nci.conf
 odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_45:vendor/firmware/sn220u.bin
 
 # OSENSE
-odm/lib64/libosensenativeproxy_client.so:odm/lib64/libosensenativeproxy_client_lighthouse.so;FIX_SONAME
+vendor/lib64/libosensenativeproxy_client.so:odm/lib64/libosensenativeproxy_client_lighthouse.so;FIX_SONAME
 
 # OPlus Misc HAL (Spruce camera button)
 odm/bin/hw/vendor-oplus-hardware-misc-V1-service
@@ -2165,3 +2165,56 @@ vendor/lib64/liboemcrypto.so
 my_product/vendor/etc/multimedia_display_adfr2minfps_config.xml:vendor/etc/multimedia_display_adfr2minfps_config.xml
 odm/lib64/libdisplayadfr2minfps_qcom.so
 odm/lib64/libdisplayhistoctrl_qcom.so
+
+# Camera models and in-app guide resources from COS17
+odm/etc/camera/Vega_Detect_Head_BGR.model
+odm/etc/camera/Vega_Refine_Head.model
+odm/etc/camera/Vega_Track_Head_Gray.model
+odm/etc/camera/apk_resources/mp4/ai_composition_entry_guide_inspiration_video.mp4
+odm/etc/camera/apk_resources/mp4/ai_composition_entry_guide_inspiration_video_zh.mp4
+odm/etc/camera/apk_resources/mp4/ai_composition_entry_guide_video.mp4
+odm/etc/camera/apk_resources/mp4/ai_composition_entry_guide_video_zh.mp4
+odm/etc/camera/apk_resources/mp4/lumo_guide_video_1.mp4
+odm/etc/camera/apk_resources/mp4/lumo_guide_video_2.mp4
+odm/etc/camera/apk_resources/mp4/mag_handle_popup.mp4
+odm/etc/camera/apk_resources/mp4/mag_handle_popup_night.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_night_page_1.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_night_page_2.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_night_page_3.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_night_page_4.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_night_page_sliver_1.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_night_page_sliver_2.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_night_page_sliver_3.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_night_page_sliver_4.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_page1.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_page2.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_page3.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_page4.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_page_sliver_1.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_page_sliver_2.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_page_sliver_3.mp4
+odm/etc/camera/apk_resources/mp4/outflash_guide_page_sliver_4.mp4
+odm/etc/camera/apk_resources/mp4/outflash_popup.mp4
+odm/etc/camera/apk_resources/mp4/outflash_popup_night.mp4
+odm/etc/camera/apk_resources/mp4/outflash_popup_night_sliver.mp4
+odm/etc/camera/apk_resources/mp4/outflash_popup_sliver.mp4
+odm/etc/camera/facerestore/fr_models/FJ_B_O.bin
+odm/etc/camera/facerestore/fr_models/FJ_H_C.bin
+odm/etc/camera/fb_model/002_pre.png
+odm/etc/camera/fb_model/012_pre.png
+odm/etc/camera/fb_model/100_pre.png
+odm/etc/camera/fb_model/101_pre.png
+odm/etc/camera/fb_model/102_pre.png
+odm/etc/camera/fb_model/103_pre.png
+odm/etc/camera/fb_model/110_pre.png
+odm/etc/camera/fb_model/111_pre.png
+odm/etc/camera/fb_model/112_pre.png
+odm/etc/camera/fb_model/200_pre.png
+odm/etc/camera/fb_model/201_pre.png
+odm/etc/camera/fb_model/202_pre.png
+odm/etc/camera/fb_model/203_pre.png
+odm/etc/camera/fb_model/210_pre.png
+odm/etc/camera/fb_model/211_pre.png
+odm/etc/camera/fb_model/212_pre.png
+odm/etc/camera/filters_res/lut_all_points.png
+odm/etc/camera/filters_res/overlay_p4_3_weak.png

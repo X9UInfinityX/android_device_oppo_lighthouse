@@ -27,8 +27,8 @@ PRODUCT_MODEL := CPH2841
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="qssi_64-user 16 BP2A.250605.015 1782811448466 release-keys" \
-    BuildFingerprint=OPPO/CPH2841IN/OP627CL1:16/BP2A.250605.015/B.R4T2.29f5fc9-54e8c2-574b37:user/release-keys \
+    BuildDesc="qssi_64-user 17 CP2A.260605.016 1792250571287 release-keys" \
+    BuildFingerprint=OPPO/CPH2841IN/OP627CL1:17/CP2A.260605.016/1792250571287:user/release-keys \
     DeviceName=OP627CL1 \
     DeviceProduct=CPH2841 \
     SystemDevice=OP627CL1 \

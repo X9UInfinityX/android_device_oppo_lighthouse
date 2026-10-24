@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OPPO Find X9 Ultra (CPH2841_16.0.9.403(EX01)).
+## are from OPPO Find X9 Ultra (CPH2841_17.0.0.101(EX01)).
 
 # Exception:
 # abl.img: device-tree supplied 16.0.6(1) image.
