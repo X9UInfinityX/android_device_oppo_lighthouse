@@ -4,3 +4,9 @@ ro.vendor.oplus.radio.esim.feature=2
 # Regional properties
 import /odm/etc/${ro.boot.prjname}/build.default.prop
 ro.product.property_source_order=odm,vendor,product,system_ext,system
+
+# Match the COS17 sensor feature flags used by the FusionLight backend.
+ro.vendor.oplus.sensor.brl_receive=true
+ro.vendor.oplus.sensor.high_pwm_rgb=true
+ro.vendor.oplus.sensor.lb_algo=true
+ro.vendor.oplus.sensor.use_black_mode=true

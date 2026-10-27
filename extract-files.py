@@ -88,11 +88,16 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
-    (
-        'vendor/lib64/camera/components/com.qti.node.dewarp.so',
-        'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so',
-    ): blob_fixup()
+    'vendor/lib64/camera/components/com.qti.node.dewarp.so': blob_fixup()
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
+    'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
+        # The COS17 offline service reads the old handle size at +0x1c. Source
+        # SnapAlloc stores SnapHandleProperties::size at +0x50 instead.
+        .binary_regex_replace(
+            b'\x1a\x1d\x40\xb9\x00\x0d\x40\xb9',
+            b'\x1a\x51\x40\xb9\x00\x0d\x40\xb9',
+        ),
     'odm/lib64/libocam_hmbird.so': blob_fixup()
         .replace_needed('libosensenativeproxy_client.so', 'libosensenativeproxy_client_lighthouse.so'),
     (
@@ -151,10 +156,5 @@ add_generated_thermal_engine_config(module, '25212,25211')
 
 if __name__ == '__main__':
     common_module = ExtractUtils.get_module('sm8850-common', module.vendor)
-    # Apollo needs the X9 Ultra calibration files relocated from my_product.
-    # Both prefixes have the same length to preserve the stock ELF layout.
-    common_module.blob_fixups['vendor/lib64/libsdmcore.so'].binary_regex_replace(
-        b'/my_product/vendor/etc/', b'/vendor/etc/oplus_disp/'
-    )
     utils = ExtractUtils(module, [common_module])
     utils.run()
