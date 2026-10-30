@@ -2091,6 +2091,7 @@ system_ext/framework/vendor.oplus.hardware.misc-V1-java.jar
 
 # Sensors config
 my_product/etc/fusionlight_profile/fusionlight_Main_1_A.json:odm/etc/fusionlight_profile/fusionlight_Main_1_A.json
+odm/etc/sensor/config/json_list
 odm/etc/sensor/config/kaanapali_mtp_ak09919.json
 odm/etc/sensor/config/kaanapali_mtp_alsps.json
 odm/etc/sensor/config/kaanapali_mtp_alsps_hw_tcs3760.json
@@ -2114,6 +2115,7 @@ odm/etc/sensor/config/oplus_mag_fusion_v2.json
 odm/etc/sensor/config/oplus_pedometer_minute.json
 odm/etc/sensor/config/oplus_rotation_detect.json
 odm/etc/sensor/config/oplus_rotv.json
+odm/etc/sensor/sensor_config.json
 odm/etc/sensor/sensor_type
 
 # Touchscreen firmware
